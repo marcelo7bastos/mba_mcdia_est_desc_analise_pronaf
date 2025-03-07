@@ -21,8 +21,39 @@ st.markdown(
 )
 
 # Carregar os dados automaticamente
-file_path = r"data\pronaf_tratado.parquet"
-df = pd.read_parquet(file_path)
+#https://drive.google.com/file/d/1whqhmvsWbXpmCaOjASUDmEolMIyMjZIG/view?usp=sharing
+#file_path = r"data\pronaf_tratado.parquet"
+#df = pd.read_parquet(file_path)
+import pandas as pd
+import gdown
+import os
+
+# Definir o ID do arquivo no Google Drive
+file_id = "1whqhmvsWbXpmCaOjASUDmEolMIyMjZIG"
+
+# Criar diretório "data" se não existir
+data_dir = "data"
+os.makedirs(data_dir, exist_ok=True)
+
+# Definir o caminho do arquivo dentro da pasta "data"
+file_path = os.path.join(data_dir, "pronaf_tratado.parquet")
+
+# Baixar o arquivo apenas se ele não existir
+if not os.path.exists(file_path):
+    try:
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, file_path, quiet=False)
+        print(f"Arquivo baixado com sucesso: {file_path}")
+    except Exception as e:
+        print(f"Erro ao baixar o arquivo: {e}")
+
+# Carregar o arquivo Parquet
+try:
+    df = pd.read_parquet(file_path)
+    print("Arquivo Parquet carregado com sucesso!")
+except Exception as e:
+    print(f"Erro ao carregar o arquivo Parquet: {e}")
+#######
 
 # Visão Geral dos Dados
 st.write("### 🔍 Visão Geral dos Dados")
