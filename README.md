@@ -1,5 +1,12 @@
 ## 📌 Análise Estatística Descritiva do PRONAF
 
+Links Úteis:
+- Vídeo curto apresentando o trabalho: https://drive.google.com/file/d/1ezxVHi-wwjXCQ4v1Cz9VqV91d0R5U1QX/view?usp=sharing
+- Caderno Jupyter em html: https://drive.google.com/file/d/1JXRGvBOofyBZeMLAtOIudX0sxz_m_qBH/view?usp=sharing
+- Pasta compartilhada do google drive: https://drive.google.com/drive/folders/1-YErOFJID9uqtoe7Wl8Oe-hBMap6SBxH?usp=sharing
+- Github: https://github.com/marcelo7bastos/mba_mcdia_est_desc_analise_pronaf
+  
+
 ### 📖 Descrição
 Este repositório contém um estudo de **Estatística Descritiva** aplicado a um conjunto de dados relacionado ao **PRONAF (Programa Nacional de Fortalecimento da Agricultura Familiar)**. O objetivo da análise é entender a distribuição das variáveis, explorar padrões e fornecer insights relevantes para a tomada de decisão.
 
